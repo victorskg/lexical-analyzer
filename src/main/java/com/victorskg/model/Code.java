@@ -7,11 +7,11 @@ import java.util.Objects;
 
 public class Code {
 
-    @JsonProperty("codigo")
+    @JsonProperty("code")
     private String code;
 
     @JsonCreator
-    public Code(@JsonProperty("codigo") String code) {
+    public Code(@JsonProperty("code") String code) {
         this.code = code;
     }
 

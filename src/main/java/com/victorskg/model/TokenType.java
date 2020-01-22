@@ -7,6 +7,10 @@ import static java.util.regex.Pattern.compile;
 
 public enum TokenType {
 
+    Array("( {0}[a-z]*\\[\\]).*"),
+    String("\\b(String)\\b.*"),
+    StringConstant("(\".*\").*"),
+    Boolean("\\b(boolean)\\b.*"),
     BlockComment("(/\\*.*?\\*/).*"),
     LineComment("(//(.*?)[\r$]?\n).*"),
     WhiteSpace("( ).*"),

@@ -10,6 +10,11 @@ public class Token {
 
     private String tokenString;
 
+    public Token() {
+        this.beginIndex = 0;
+        this.endIndex = 0;
+    }
+
     public Token(int beginIndex, int endIndex, String tokenString, TokenType tokenType) {
         this.beginIndex = beginIndex;
         this.endIndex = endIndex;
@@ -35,9 +40,11 @@ public class Token {
 
     @Override
     public String toString() {
-        if (!this.getTokenType().isAuxiliary())
-            return tokenType + "  '" + tokenString + "' [" + beginIndex + ";" + endIndex + "] ";
-        else
-            return tokenType + "   [" + beginIndex + ";" + endIndex + "] ";
+        return "Token{" +
+                "beginIndex=" + beginIndex +
+                ", endIndex=" + endIndex +
+                ", tokenType=" + tokenType +
+                ", tokenString='" + tokenString + '\'' +
+                '}';
     }
 }

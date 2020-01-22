@@ -1,6 +1,5 @@
 package com.victorskg.api;
 
-import com.victorskg.exception.AnalyzerException;
 import com.victorskg.model.Code;
 import com.victorskg.model.Token;
 import com.victorskg.service.LexicalAnalyzerService;
@@ -26,7 +25,7 @@ public class LexicalAnalyzerController {
     }
 
     @PostMapping()
-    public List<Token> analyze(@RequestBody Code code) throws AnalyzerException {
+    public List<Token> analyze(@RequestBody Code code) {
         return analyzerService.analyze(code.getCode());
     }
 }
