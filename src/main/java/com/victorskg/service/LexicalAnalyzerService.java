@@ -24,11 +24,6 @@ public class LexicalAnalyzerService {
         var tokens = new ArrayList<Token>();
 
         do {
-            /*token = separateToken(source, fromIndex);
-            if (nonNull(token)) {
-                fromIndex = token.getEnd();
-                tokens.add(token);
-            }*/
             var finalToken = token;
             token = Option.of(separateToken(source, token.getEnd())).peek(tokens::add).getOrElseThrow(() -> {
                 throw new IllegalArgumentException(format("Erro léxico na posição %d!", finalToken.getEnd()));

@@ -13,6 +13,7 @@ import java.util.List;
 @RequestScope
 @RestController
 @RequestMapping(path = "/analise-lexica")
+@CrossOrigin(origins = "*", allowedHeaders = "*")
 public class LexicalAnalyzerController {
 
     private final ExampleService exampleService;
